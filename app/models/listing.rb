@@ -14,14 +14,14 @@ class Listing < ActiveRecord::Base
 
 
   before_create :set_user_as_host
-  before_destroy :set_user_as_not_host
+  before_destroy :set_user_as_user
 
 
   def set_user_as_host
     self.host.host = true
   end
 
-  def set_user_as_not_host
+  def set_user_as_user
     self.host.host = false
   end
 
