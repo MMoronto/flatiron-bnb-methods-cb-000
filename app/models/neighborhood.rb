@@ -17,7 +17,7 @@ class Neighborhood < ActiveRecord::Base
       
       sum_of_reservations = 0
       
-      neighborhoods.listings.each do |listing|
+      neighborhood.listings.each do |listing|
         sum_of_reservations += listing.reservations.count
       end
       
