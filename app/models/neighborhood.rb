@@ -34,7 +34,7 @@ class Neighborhood < ActiveRecord::Base
     highest_ratio = 0
     Neighborhood.all.each do |neighborhood|
       
-      sum_of_listings = neighborhood.listing.count
+      sum_of_listings = neighborhood.listings.count
       sum_of_reservations = 0
       
       neighborhood.listings.each do |listing|
